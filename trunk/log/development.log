@@ -7865,3 +7865,47 @@ Rendering template within layouts/application
 Rendering sessions/new
 Rendered users/_user_bar (0.00000)
 Completed in 0.03200 (31 reqs/sec) | Rendering: 0.01600 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 14:20:37) [GET]
+  Session ID: 95b38b882eb05fa39dce62bda6bf37fa
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.01600 (62 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/entries]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-10-26 14:20:38) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIg0vZW50cmllcyIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--60f846f1c99bcb523a0478be0b847deb1fe741e3
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-10-26 14:20:47) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIg0vZW50cmllczoMY3NyZl9pZCIlMTQ1N2VhZTA1
+Mzk0Yzc1YjgxZWI0ODRkNzdiMDA3MDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRy
+b2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--434b24fff3a1815f381b0c654a2f3c2fdcfa01f7
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"7f948263f5648c37777fb161418d5aa14f2c53d4", "action"=>"create", "controller"=>"sessions", "password"=>"luckycat", "login"=>"david"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'david') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://localhost:3000/entries
+Completed in 0.18800 (5 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/session]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 14:20:48) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY6DGNzcmZfaWQiJTE0NTdl
+YWUwNTM5NGM3NWI4MWViNDg0ZDc3YjAwNzAw--84d2b19fc404572d073e9fa0c75f8f44d30a8a2b
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.016000)[0m   [0;1mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.00000)
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.07800 (38%) | DB: 0.01600 (7%) | 200 OK [http://localhost/entries]
