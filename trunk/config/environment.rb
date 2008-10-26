@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.0.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -16,9 +16,15 @@ Rails::Initializer.run do |config|
   # -- all .rb files in that directory are automatically loaded.
   # See Rails::Configuration for more options.
 
-  # Skip frameworks you're not going to use (only works if using vendor/rails).
-  # To use Rails without a database, you must remove the Active Record framework
+  # Skip frameworks you're not going to use. To use Rails without a database
+  # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+
+  # Specify gems that this application depends on. 
+  # They can then be installed with "rake gems:install" on new installations.
+  # config.gem "bj"
+  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
+  # config.gem "aws-s3", :lib => "aws/s3"
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
@@ -32,18 +38,23 @@ Rails::Initializer.run do |config|
   # (by default production uses :info, the others :debug)
   # config.log_level = :debug
 
+  # Make Time.zone default to the specified zone, and make Active Record store time values
+  # in the database in UTC, and return them converted to the specified local zone.
+  # Run "rake -D time" for a list of tasks for finding time zone names. Comment line to use default local time.
+  config.time_zone = 'UTC'
+
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :session_key => '_hearsay_session',
-    :secret      => '2a9e22a4939198e44219eaba70f7b39acdc9d20ad27c1442abe7c87f5ddc3b14040d110c30fda77a7ea2397bdc6fff166e60ba556f2ff0787c0bd854272dec34'
+    :secret      => '4e61a911453668c8a1397e0ecd43a38a74e7ec3d26287251406ddcc4f2df540f2af0f16d91e3a0819f821772efa0b9de8594ca351033ecdb4fd8b7f12431f60f'
   }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
-  # (create the session table with 'rake db:sessions:create')
+  # (create the session table with "rake db:sessions:create")
   # config.action_controller.session_store = :active_record_store
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
@@ -53,7 +64,4 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
-
-  # Make Active Record use UTC-base instead of local time
-  # config.active_record.default_timezone = :utc
 end

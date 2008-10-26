@@ -1,4 +1,4 @@
-#!C:/InstantRails-2.0-win/ruby/bin/ruby
+#!c:/ruby/bin/ruby
 #
 # You may specify the path to the FastCGI crash log (a log of unhandled
 # exceptions which forced the FastCGI instance to exit, great for debugging)

@@ -1,4 +1,4 @@
-#!C:/InstantRails-2.0-win/ruby/bin/ruby
+#!c:/ruby/bin/ruby
 
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_ROOT)
 
