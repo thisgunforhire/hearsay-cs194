@@ -1,0 +1,34 @@
+
+<p>
+  <b>Title:</b>
+  <%=h @entry.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @entry.description %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%=h @entry.picture%>
+  <img src="image/<%=h @entry.picture%>">
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @entry.category %>
+</p>
+
+<%# for comment in @entry.comments %>
+<p>
+<%#= comment.comment %>
+</p>
+<%# end %>
+
+<%#= link_to 'New Comment', new_entry_comment_url(@entry) %> 
+
+<p>
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
+</p>

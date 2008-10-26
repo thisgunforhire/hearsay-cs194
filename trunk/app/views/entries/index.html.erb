@@ -1,0 +1,32 @@
+<div id="entry-list">
+  <h1>Listing entries</h1>
+
+  <table cellpadding="5" cellspacing="0">
+  <% for entry in @entries %>
+    <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-event') %>">
+      
+      <td>
+        <img class="list-one-sheet" src="<%=entry.picture%>">
+      </td>
+      
+      <td width="60%">
+        <span class="list-title"><%= h(entry.title) %></span><br />
+        <%= h(truncate(entry.description, 80)) %>
+      </td>
+      
+      <td> <br /><b> <%= entry.category %></b> </td>
+      
+      <td class="list-actions">
+        <br />
+        <%= link_to 'Show', entry %><br />
+        <%= link_to 'Edit', edit_entry_path(entry) %><br />
+        <%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+    
+  <% end %>
+  </table>
+</div>
+<br />
+
+<%= link_to 'New entry', new_entry_path %>
