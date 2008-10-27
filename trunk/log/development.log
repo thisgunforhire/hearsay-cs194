@@ -13142,3 +13142,32 @@ Rendering template within layouts/entries
 Rendering entries/index
 Rendered users/_user_bar (0.01600)
 Completed in 0.21900 (4 reqs/sec) | Rendering: 0.04700 (21%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries]
+  [4;36;1mSQL (0.015000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081025180957)
+  [4;36;1mSQL (0.094000)[0m   [0;1mDROP TABLE "users"[0m
+  [4;35;1mSQL (0.078000)[0m   [0mDELETE FROM schema_migrations WHERE version = '20081025180957'[0m
+Migrating to CreateComments (20081025180938)
+  [4;36;1mSQL (0.109000)[0m   [0;1mDROP TABLE "comments"[0m
+  [4;35;1mSQL (0.094000)[0m   [0mDELETE FROM schema_migrations WHERE version = '20081025180938'[0m
+Migrating to CreateEntries (20081025180816)
+  [4;36;1mSQL (0.078000)[0m   [0;1mDROP TABLE "entries"[0m
+  [4;35;1mSQL (0.094000)[0m   [0mDELETE FROM schema_migrations WHERE version = '20081025180816'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.015000)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
