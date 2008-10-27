@@ -11975,3 +11975,336 @@ Rendering template within layouts/entries
 Rendering entries/index
 Rendered users/_user_bar (0.00000)
 Completed in 0.20400 (4 reqs/sec) | Rendering: 0.04700 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 21:09:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.00000)
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2008-10-26 23:51:34) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00000)
+Rendered users/_user_bar (0.00000)
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.03200 (22%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/new]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2008-10-26 23:51:53) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"58739e0cad0eb00fd33d31d5363e6f5843304938", "action"=>"create", "controller"=>"entries", "entry"=>{"category"=>"bumbs", "title"=>"sam is a bum", "description"=>"sam is a bum yeah he is", "picture"=>"http://media1.guzer.com/pictures/honest_bum.jpg"}}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.01600)
+Rendered users/_user_bar (0.00000)
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.01600 (10%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2008-10-26 23:52:15) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"58739e0cad0eb00fd33d31d5363e6f5843304938", "action"=>"create", "controller"=>"entries", "entry"=>{"category"=>"bums", "title"=>"sam is a bum", "description"=>"sam is a bum yeah he is", "picture"=>"http://media1.guzer.com/pictures/honest_bum.jpg"}}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Create (0.000000)[0m   [0mINSERT INTO "entries" ("category", "updated_at", "title", "description", "picture", "created_at") VALUES('bums', '2008-10-27 07:52:15', 'sam is a bum', 'sam is a bum yeah he is', 'http://media1.guzer.com/pictures/honest_bum.jpg', '2008-10-27 07:52:15')[0m
+Redirected to http://localhost:3000/entries/7
+Completed in 0.29600 (3 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/entries]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:52:15) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIkRW50cnkg
+d2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CEY6DGNzcmZf
+aWQiJThhZmZmZmZjYTFhYmFlZTFhNjQ4NDQ0Njk1Zjg1OGQw--e901db5009cfb7ab3d8c8739dbc5cb0065093ea0
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"entries"}
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" WHERE ("entries"."id" = 7) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.23400)
+Completed in 0.57800 (1 reqs/sec) | Rendering: 0.26500 (45%) | DB: 0.01500 (2%) | 200 OK [http://localhost/entries/7]
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2008-10-26 23:53:01) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJEVudHJ5IHdh
+cyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwlU--6918a681c8d46539b24ea763eb5764d1321a800c
+  Parameters: {"entry_id"=>"7", "action"=>"new", "controller"=>"comments"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" WHERE ("entries"."id" = 7) [0m
+Rendering template within layouts/comments
+Rendering comments/new
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.01500 (9%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/7/comments/new]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2008-10-26 23:53:13) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"commit"=>"Create", "entry_id"=>"7", "authenticity_token"=>"58739e0cad0eb00fd33d31d5363e6f5843304938", "action"=>"create", "controller"=>"comments", "comment"=>{"comment"=>"i could have told you that"}}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" WHERE ("entries"."id" = 7) [0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mINSERT INTO "comments" ("updated_at", "comment", "created_at") VALUES('2008-10-27 07:53:14', 'i could have told you that', '2008-10-27 07:53:14')[0m
+Redirected to http://localhost:3000/entries/7
+Completed in 0.25000 (4 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/entries/7/comments]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:53:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJkNvbW1lbnQg
+d2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CUY=--20ce2b68e10aefef2f2a0ef3cd9491066c4d2279
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.000000)[0m   [0;1mSELECT * FROM "entries" WHERE ("entries"."id" = 7) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.01600)
+Completed in 0.36000 (2 reqs/sec) | Rendering: 0.03100 (8%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/7]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 23:53:30) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSImQ29tbWVu
+dCB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIVDoMY3Ny
+Zl9pZCIlOGFmZmZmZmNhMWFiYWVlMWE2NDg0NDQ2OTVmODU4ZDA=--c712cadd3f4b0af4dd6a94e845792735e0020991
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.000000)[0m   [0;1mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.01600)
+Completed in 0.39100 (2 reqs/sec) | Rendering: 0.03200 (8%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:53:34) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.000000)[0m   [0;1mSELECT * FROM "entries" WHERE ("entries"."id" = 1) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.01600)
+Completed in 0.15700 (6 reqs/sec) | Rendering: 0.03200 (20%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/1]
+
+
+Processing EntriesController#images (for 127.0.0.1 at 2008-10-26 23:53:35) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"format"=>"jpg", "action"=>"images", "id"=>"david", "controller"=>"entries"}
+
+
+ActionController::UnknownAction (No action responded to images):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:53:45) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.000000)[0m   [0;1mSELECT * FROM "entries" WHERE ("entries"."id" = 6) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.01600)
+Completed in 0.36000 (2 reqs/sec) | Rendering: 0.04700 (13%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/6]
+
+
+Processing EntriesController#images (for 127.0.0.1 at 2008-10-26 23:53:46) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"rails", "controller"=>"entries"}
+
+
+ActionController::UnknownAction (No action responded to images):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:53:50) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.016000)[0m   [0;1mSELECT * FROM "entries" WHERE ("entries"."id" = 7) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.01600)
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.03100 (19%) | DB: 0.01600 (10%) | 200 OK [http://localhost/entries/7]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 23:54:12) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mEntry Load (0.000000)[0m   [0;1mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.00000)
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.03200 (22%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2008-10-26 23:54:16) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00000)
+Rendered users/_user_bar (0.01500)
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.06200 (30%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/new]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2008-10-26 23:55:33) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3Jm
+X2lkIiU4YWZmZmZmY2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMA==--3b46eca37728f434a05a93d2c1c0052c2f638a29
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"58739e0cad0eb00fd33d31d5363e6f5843304938", "action"=>"create", "controller"=>"entries", "entry"=>{"category"=>"ho's", "title"=>"denise being a ho again", "description"=>"oh yeah", "picture"=>"http://photos-075.ll.facebook.com/photos-ll-sf2p/v356/29/65/1224075/n1224075_42064413_5027.jpg"}}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Create (0.015000)[0m   [0mINSERT INTO "entries" ("category", "updated_at", "title", "description", "picture", "created_at") VALUES('ho''s', '2008-10-27 07:55:33', 'denise being a ho again', 'oh yeah', 'http://photos-075.ll.facebook.com/photos-ll-sf2p/v356/29/65/1224075/n1224075_42064413_5027.jpg', '2008-10-27 07:55:33')[0m
+Redirected to http://localhost:3000/entries/8
+Completed in 0.23400 (4 reqs/sec) | DB: 0.01500 (6%) | 302 Found [http://localhost/entries]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2008-10-26 23:55:33) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJEVudHJ5IHdh
+cyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwlG--7c8a8d0c01ba3e0a0d5b0de8f19733a197d2407b
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"entries"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" WHERE ("entries"."id" = 8) [0m
+Rendering template within layouts/entries
+Rendering entries/show
+Rendered users/_user_bar (0.01600)
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.01600 (10%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries/8]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 23:55:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIkRW50cnkg
+d2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CFQ6DGNzcmZf
+aWQiJThhZmZmZmZjYTFhYmFlZTFhNjQ4NDQ0Njk1Zjg1OGQw--d536401ba7883f665e87cd152add3525503c061d
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.01600)
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.03100 (19%) | DB: 0.00000 (0%) | 200 OK [http://localhost/entries]
