@@ -20,11 +20,11 @@
   <%=h @entry.category %>
 </p>
 
-<% #for comment in @entry.comments %>
+<% for comment in @entry.comments %>
 <p>
-<%#= comment.comment %>
+<%= comment.comment %>
 </p>
-<% #end %>
+<% end %>
 
 <%= link_to 'New Comment', new_entry_comment_url(@entry) %> 
 
