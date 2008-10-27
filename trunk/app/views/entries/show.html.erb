@@ -1,4 +1,7 @@
-
+<html>
+<head>
+</head>
+<body>
 <p>
   <b>Title:</b>
   <%=h @entry.title %>
@@ -12,7 +15,11 @@
 <p>
   <b>Picture:</b>
   <%=h @entry.picture%>
-  <img src="image/<%=h @entry.picture%>">
+  </p>
+  <p>
+  <img class="list-one-sheet" src="<%=h @entry.picture%>">
+  </p>
+  <br><%= image_tag(@entry.picture) %>
 </p>
 
 <p>
@@ -20,15 +27,17 @@
   <%=h @entry.category %>
 </p>
 
-<%# for comment in @entry.comments %>
+<% #for comment in @entry.comments %>
 <p>
 <%#= comment.comment %>
 </p>
-<%# end %>
+<% #end %>
 
-<%#= link_to 'New Comment', new_entry_comment_url(@entry) %> 
+<%= link_to 'New Comment', new_entry_comment_url(@entry) %> 
 
 <p>
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
 </p>
+</body>
+</html>

@@ -1,11 +1,13 @@
 class CommentsController < ApplicationController
-  before_filter :login_required, :only=> [:destroy, :update, :edit, :create, :new]
-  before_filter :check_user, :only => [:destroy, :update, :edit]
+  before_filter :login_required, :only=> [:destroy, :update, :edit, :create, :new, :show, :index]
+  #before_filter :check_user, :only => [:destroy, :update, :edit]
   # GET /comments
   # GET /comments.xml
   def index
     @entry = Entry.find(params[:entry_id])
 	  @comments = @entry.comments
+    #@comment.entry = @entry
+    #@comment.user = current_user
    
 	  respond_to do |format|
     #  format.html # index.html.erb
@@ -18,6 +20,8 @@ class CommentsController < ApplicationController
   def show
     @comment = Comment.find(params[:id])
 	  @entry = Entry.find(params[:entry_id])
+    #@comment.entry = @entry
+    #@comment.user = current_user
 
     respond_to do |format|
     #  format.html # show.html.erb
@@ -30,6 +34,8 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
 	  @entry = Entry.find(params[:entry_id])
+    #@comment.entry = @entry
+    #@comment.user = current_user
 	
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +47,8 @@ class CommentsController < ApplicationController
   def edit
     @comment ||= Comment.find(params[:id])
 	  @entry = Entry.find(params[:entry_id])
+    #@comment.entry = @entry
+    #@comment.user = current_user
   end
 
   # POST /comments
