@@ -11962,3 +11962,16 @@ ActionController::UnknownAction (No action responded to images):
     script/server:3
 
 Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2008-10-26 21:03:58) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4YWZmZmZm
+Y2ExYWJhZWUxYTY0ODQ0NDY5NWY4NThkMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3683aa332ccc4e64ab63955b9cc34c6eb0a749cc
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mEntry Load (0.000000)[0m   [0mSELECT * FROM "entries" [0m
+Rendering template within layouts/entries
+Rendering entries/index
+Rendered users/_user_bar (0.00000)
+Completed in 0.20400 (4 reqs/sec) | Rendering: 0.04700 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]

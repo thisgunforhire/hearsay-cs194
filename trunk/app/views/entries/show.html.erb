@@ -1,7 +1,3 @@
-<html>
-<head>
-</head>
-<body>
 <p>
   <b>Title:</b>
   <%=h @entry.title %>
@@ -15,11 +11,8 @@
 <p>
   <b>Picture:</b>
   <%=h @entry.picture%>
-  </p>
-  <p>
-  <img class="list-one-sheet" src="<%=h @entry.picture%>">
-  </p>
-  <br><%= image_tag(@entry.picture) %>
+  <br />
+  <img src="<%=h @entry.picture%>">
 </p>
 
 <p>
@@ -39,5 +32,3 @@
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
 </p>
-</body>
-</html>
