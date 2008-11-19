@@ -1,30 +1,39 @@
+<html>
+<body>
 <div id="entry-list">
-  <h1>entries</h1>
+  <!--<h1>entries</h1>-->
 
-  <table cellpadding="5" cellspacing="0" width="90%">
   <% for entry in @entries %>
-    <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-event') %>">
-      
-      <td>
-        <img class="list-one-sheet" src="<%=entry.picture%>">
+  <p>
+  <table cellpadding="5" cellspacing="0" width="100%">
+      <tr class="list-line-even">
+         <td>
+	 <img class="list-one-sheet" src="<%=entry.picture%>">
       </td>
       
       <td width="90%">
-        <span class="list-title"><%= h(entry.title) %></span><br />
-        <%= h(truncate(entry.description, 80)) %>
+      <div align="right">USERNAME | DATE_POSTED</div>
+      <p>
+        <span class="list-title"><%= link_to h(entry.title), entry %></span><br />
+	<subs><b>category:</b> <%= entry.category %></p></subs>
 	<p>
-	<b>category:</b> <%= entry.category %>
-      <div class="list-actions">
-        <%= link_to 'read more', entry %> | 
+        <%= h(truncate(entry.description, 80)) %>
+	</p>
+	<p>
+	<div class="list-actions">
         <%= link_to 'edit', edit_entry_path(entry) %> | 
         <%= link_to 'delete', entry, :confirm => 'Are you sure?', :method => :delete %>
       </p>
       </td>
           </tr>
     
-  <% end %>
+  
   </table>
+  </p>
+  <% end %>
 </div>
 <br />
 
 <%= link_to 'Post a new entry', new_entry_path %>
+</body>
+</html>

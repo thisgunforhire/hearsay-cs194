@@ -6,6 +6,7 @@ body {
 a {
 	text-decoration: none;
 	color: fuchsia;
+	font-weight: bold;
 }
 #notice {
 border: 2px solid red;
@@ -93,6 +94,11 @@ padding-bottom: 1em;
 padding-right: 1em;
 height: auto;
 }
+#entries img{
+	border: 2px solid #1E90FF;
+	padding: 0em;
+	background: #000000;
+}
 #entries p1 {
 	font-weight: bold;
 	color: fuchsia;
@@ -121,13 +127,22 @@ padding-left: 1em;
 }
 
 #entry-list .list-line-even {
-background: #ffccff;
+background: #000000;
+color: #ffffff;
 }
 
 #entry-list .list-line-odd {
 background: #d0d0d0;
 }
-
+#entry-list table {
+	border: 1px solid #1E90FF;
+}
+#entry-list td {
+	padding-left: 2em;
+}
+#entry-list subs{
+	font-size: smaller;
+}
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
