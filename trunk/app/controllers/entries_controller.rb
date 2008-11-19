@@ -29,7 +29,10 @@ class EntriesController < ApplicationController
   # GET /entries/new.xml
   def new
     @entry = Entry.new
-
+    
+    @entry.numVotes = 0
+    @entry.totalScore = 0
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @entry }
@@ -104,6 +107,12 @@ class EntriesController < ApplicationController
           access_denied
         end
   end
-
-
+  
+  def add_vote(new_vote)
+    self.raw_score += new_vote
+    self.num_votes += 1  
+    self.score = (self.raw_score * 1.0) / (self.num_votes)
+  
+  end
+  
 end

@@ -6,7 +6,11 @@ class CreateEntries < ActiveRecord::Migration
       t.string :picture
       t.string :category
       t.integer :user_id
-
+      
+      t.integer :num_votes
+      t.integer :raw_score
+      t.decimal :score
+      
       t.timestamps
     end
   end
