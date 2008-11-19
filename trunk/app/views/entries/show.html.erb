@@ -15,7 +15,11 @@
 </p>
 
 <p align="center">
-  <img src="<%=h @entry.picture%>">
+  <% if @entry.picture == NIL %>
+       <img src="/images/smiley.jpg">
+  <% else %>
+       <img src="<%=h @entry.picture%>">
+   <% end %>
 </p>
 
 <p>

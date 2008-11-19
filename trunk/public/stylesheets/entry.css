@@ -139,9 +139,13 @@ background: #d0d0d0;
 }
 #entry-list td {
 	padding-left: 2em;
+	padding-top: 0em;
 }
 #entry-list subs{
-	font-size: smaller;
+	font-size: x-small;
+}
+#subs {
+	font-size: x-small;
 }
 .fieldWithErrors {
   padding: 2px;
