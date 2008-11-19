@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
   def show
     @comment = Comment.find(params[:id])
 	  @entry = Entry.find(params[:entry_id])
+    @user = @comment.user
     #@comment.entry = @entry
     #@comment.user = current_user
 
