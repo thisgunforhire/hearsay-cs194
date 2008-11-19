@@ -7,21 +7,25 @@
 <body id="comments">
 <p>
    <t1><%=h @entry.title %></t1>
-   <br><b>Category:</b>   <%=h @entry.category %> | <b>Tags:</b>
+   <br><b>category:</b>   <%=h @entry.category %> | <b>tags: </b>
 </p>
 <p>
 <br>
-  <%=h @entry.description %>
+     <%=h @entry.description %>
 </p>
-
 <p align="center">
-  <% if @entry.picture == NIL %>
-       <img src="/images/smiley.jpg">
-  <% else %>
-       <img src="<%=h @entry.picture%>">
+<% if @entry.picture != NIL %>
+       <img src="<%=h @entry.picture%>" >
    <% end %>
-</p>
+   </p>
 
+
+  
+
+<% for tag in @tags %>
+<%= tag.tag %>
+<% end %>
+<%= link_to 'add tag', new_entry_tag_url(@entry) %>
 <p>
 <div id="shadowed-border2" class="sb">
 <div id="comment">
