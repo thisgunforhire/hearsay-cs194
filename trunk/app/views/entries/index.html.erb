@@ -1,7 +1,7 @@
 <div id="entry-list">
-  <h1>Listing entries</h1>
+  <h1>entries</h1>
 
-  <table cellpadding="5" cellspacing="0">
+  <table cellpadding="5" cellspacing="0" width="90%">
   <% for entry in @entries %>
     <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-event') %>">
       
@@ -9,24 +9,22 @@
         <img class="list-one-sheet" src="<%=entry.picture%>">
       </td>
       
-      <td width="60%">
+      <td width="90%">
         <span class="list-title"><%= h(entry.title) %></span><br />
         <%= h(truncate(entry.description, 80)) %>
+	<p>
+	<b>category:</b> <%= entry.category %>
+      <div class="list-actions">
+        <%= link_to 'read more', entry %> | 
+        <%= link_to 'edit', edit_entry_path(entry) %> | 
+        <%= link_to 'delete', entry, :confirm => 'Are you sure?', :method => :delete %>
+      </p>
       </td>
-      
-      <td> <br /><b> <%= entry.category %></b> </td>
-      
-      <td class="list-actions">
-        <br />
-        <%= link_to 'Show', entry %><br />
-        <%= link_to 'Edit', edit_entry_path(entry) %><br />
-        <%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %>
-      </td>
-    </tr>
+          </tr>
     
   <% end %>
   </table>
 </div>
 <br />
 
-<%= link_to 'New entry', new_entry_path %>
+<%= link_to 'Post a new entry', new_entry_path %>

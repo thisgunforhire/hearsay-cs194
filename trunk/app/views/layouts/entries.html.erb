@@ -3,26 +3,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Entries: <%= controller.action_name %></title>
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>hearsay! - collaborative photo sharing and gossiping of hte local community</title>
   <%= stylesheet_link_tag 'entry' %>
+  <%= javascript_include_tag "shadedBorder" %>
+  <%= javascript_include_tag "shadedBorderVar" %>
 </head>
 <body id="entry">
   <div id="banner">
-    <%= image_tag("david.jpg") %>
-    <br />
-    <%= "Hearsay!" %>
+    <!--<%= image_tag("logo02.jpg") %>-->
+    <!-- <br />
+    <%= "Hearsay!" %>-->
   </div>
+  <p>
   <div id="columns">
-    <div id="side">
-      <h1> User Info </h1>
+  <div id="shadowed-border" class="sb">
+      <div id="side">
+      <h1> user info))) </h1>
       <%= render :partial => 'users/user_bar' %>
     </div>
     <div id="main">
-      <p style="color: green"><%= flash[:notice] %></p>
+      <div id="prebox">
+      <p> Welcome! What's up? Intro text goes here. Actually, we need to make a main intro/home page.</p>
+      </div>
+      <div id="entries">
+      <p><p1><%= flash[:notice] %></p1></p>
       <%= yield  %>
+           </div>
     </div>
   </div>
-
+  </div>
+  </p>
 </body>
 </html>
