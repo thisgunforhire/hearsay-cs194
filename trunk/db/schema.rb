@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081025180957) do
+ActiveRecord::Schema.define(:version => 20081119032233) do
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
@@ -25,6 +25,26 @@ ActiveRecord::Schema.define(:version => 20081025180957) do
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "mugshots", :force => true do |t|
+    t.integer "parent_id"
+    t.string  "content_type"
+    t.string  "filename"
+    t.string  "thumbnail"
+    t.integer "size"
+    t.integer "width"
+    t.integer "height"
+  end
+
+  create_table "pics", :force => true do |t|
+    t.integer "parent_id"
+    t.string  "content_type"
+    t.string  "filename"
+    t.string  "thumbnail"
+    t.integer "size"
+    t.integer "width"
+    t.integer "height"
   end
 
   create_table "users", :force => true do |t|
