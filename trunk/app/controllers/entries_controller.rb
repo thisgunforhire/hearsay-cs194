@@ -17,6 +17,7 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 	  @comments = @entry.comments
+    @user ||= @entry.user
 	  
     respond_to do |format|
       format.html # show.html.erb
