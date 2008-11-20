@@ -7,12 +7,20 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :picture %><br />
-    <%= f.text_field :picture %>
+    <%#= f.label :picture %>
+    
+    <table border="0">
+    <tr>Insert an image from a URL or upload your own photo (<i>optional</i>)</tr>
+    <tr><td>Image from URL</td><td>Upload an image</td></tr>
+    <tr><td><input type="text" id="entry_picture" name="entry[picture]" value="http://"></td>
+    <td><%= file_field_tag 'entry_pic' %></td>
+    </tr>
+    </table>
+    <%#= f.text_field :picture %> 
   </p>
   <p>
-    <%= f.label :pic %><br />
-    <%= file_field_tag 'entry_pic' %>
+  <%#= f.label :pic %>
+    
   </p>  
   
   <p>

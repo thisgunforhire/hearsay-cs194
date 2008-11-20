@@ -12,6 +12,6 @@ class Entry < ActiveRecord::Base
   validates_presence_of :description
   validates_length_of :description, :maximum => 500, :if => Proc.new{|x| !(x.description.blank?)}
   #validates_format_of :picture, :with => %r{jpg|gif|jpeg|png}i, :message => "must be a URL for a GIF, JPG, or PNG image"
-  validates_presence_of :category
-  validates_format_of :category, :with =>%r{ho's|bums}i, :message => "must be either ho's or bums"
+  validates_presence_of :category, :message => "must be selected."
+  #validates_format_of :category, :with =>%r{hos|bums}i, :message => "Must be either ho's or bums"
 end

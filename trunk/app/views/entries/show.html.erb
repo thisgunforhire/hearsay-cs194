@@ -16,7 +16,8 @@
      <%=h @entry.description %>
 </p>
 <p align="center">
-    <%= image_tag(@entry.pic.public_filename) %>
+    <%= image_tag(@entry.picture) %>
+    <%#= image_tag(@entry.pic.public_filename) %>
 </p>
 
 <%# for tag in @tags %>
