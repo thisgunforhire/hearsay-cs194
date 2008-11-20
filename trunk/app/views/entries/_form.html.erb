@@ -17,7 +17,12 @@
   
   <p>
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    <select name="entry[category]" id="entry_category">
+    <option value="">[select a category]</option>
+    <option value="hos">hos</option>
+    <option value="bums">bums</option>
+    </select>
+    <!--<%= f.text_field :category %>-->
   </p>
   <p>
     <%= f.submit label_text %>
