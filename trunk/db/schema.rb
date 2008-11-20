@@ -9,11 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081119032233) do
+ActiveRecord::Schema.define(:version => 20081119040806) do
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
     t.integer  "entry_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,28 +24,20 @@ ActiveRecord::Schema.define(:version => 20081119032233) do
     t.text     "description"
     t.string   "picture"
     t.string   "category"
+    t.integer  "user_id"
+    t.integer  "num_votes"
+    t.integer  "raw_score"
+    t.decimal  "score"
+    t.integer  "pic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "mugshots", :force => true do |t|
-    t.integer "parent_id"
-    t.string  "content_type"
-    t.string  "filename"
-    t.string  "thumbnail"
-    t.integer "size"
-    t.integer "width"
-    t.integer "height"
-  end
-
-  create_table "pics", :force => true do |t|
-    t.integer "parent_id"
-    t.string  "content_type"
-    t.string  "filename"
-    t.string  "thumbnail"
-    t.integer "size"
-    t.integer "width"
-    t.integer "height"
+  create_table "tags", :force => true do |t|
+    t.string   "tag"
+    t.integer  "entry_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
