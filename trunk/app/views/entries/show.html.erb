@@ -14,18 +14,14 @@
      <%=h @entry.description %>
 </p>
 <p align="center">
-<% if @entry.picture != NIL %>
-       <img src="<%=h @entry.picture%>" >
-   <% end %>
-   </p>
-
-
-  
+    <%= image_tag(@entry.pic.public_filename) %>
+</p>
 
 <%# for tag in @tags %>
 <%#= tag.tag %>
 <% #end %>
 <%#= link_to 'add tag', new_entry_tag_url(@entry) %>
+
 <p>
 <div id="shadowed-border2" class="sb">
 <div id="comment">

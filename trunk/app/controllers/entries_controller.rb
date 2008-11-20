@@ -20,7 +20,7 @@ class EntriesController < ApplicationController
     
     @user ||= @entry.user
 	  
-    @pic = @entry.pic
+    #@pic = @entry.pic
     #@pic = Pic.find(params[@entry.pic_id])
     
     respond_to do |format|
