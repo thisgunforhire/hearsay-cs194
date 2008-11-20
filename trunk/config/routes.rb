@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :entries do |entry|
 	entry.resources :comments
+        entry.resources :pics
   end
 
   map.resources :comments

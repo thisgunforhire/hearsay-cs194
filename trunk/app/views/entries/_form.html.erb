@@ -11,6 +11,11 @@
     <%= f.text_field :picture %>
   </p>
   <p>
+    <%= f.label :pic %><br />
+    <%= file_field_tag 'entry_pic' %>
+  </p>  
+  
+  <p>
     <%= f.label :category %><br />
     <%= f.text_field :category %>
   </p>

@@ -20,7 +20,7 @@ end
 
 def show
     @pic = Pic.find(params[:id])
-  end
+end
 
 
 end

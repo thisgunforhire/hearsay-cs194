@@ -1,6 +1,15 @@
 class Entry < ActiveRecord::Base
   has_many:comments
   belongs_to:user
+  has_one:pic
+  
+  has_attachment :content_type => :image, 
+                 :storage => :file_system, 
+                 :processor => 'Rmagick',
+                 :max_size => 6.megabytes,                 
+                 :resize_to => '400x400>',                 
+                 :thumbnails => { :thumb => '150x150>' }
+  
   
   #validations
   validates_presence_of :user

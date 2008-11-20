@@ -11,6 +11,7 @@ class CreateEntries < ActiveRecord::Migration
       t.integer :raw_score
       t.decimal :score
       
+      t.integer :pic_id
       t.timestamps
     end
   end

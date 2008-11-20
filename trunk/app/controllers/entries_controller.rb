@@ -16,9 +16,13 @@ class EntriesController < ApplicationController
   # GET /entries/1.xml
   def show
     @entry = Entry.find(params[:id])
-	  @comments = @entry.comments
+    @comments = @entry.comments
+    
     @user ||= @entry.user
 	  
+    @pic = @entry.pic
+    #@pic = Pic.find(params[@entry.pic_id])
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entry }
@@ -30,8 +34,7 @@ class EntriesController < ApplicationController
   def new
     @entry = Entry.new
     
-    @entry.numVotes = 0
-    @entry.totalScore = 0
+   
     
     respond_to do |format|
       format.html # new.html.erb
@@ -49,7 +52,11 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(params[:entry])
     @entry.user = current_user
-
+    @entry.num_votes = 0
+    @entry.raw_score = 0
+        
+    @entry.pic = Pic.new(:uploaded_data => params[:entry_pic])
+    
     respond_to do |format|
       if @entry.save
         flash[:notice] = 'Entry was successfully created.'
